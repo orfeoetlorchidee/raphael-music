@@ -50,12 +50,10 @@ a{
 	top:8%;
 	left:-40px;
 	width:100%;
-	height:119px;
 	background:none;
 	z-index:5;
 	@media (min-height: 560px) {
-	#left{
-	margin-top:-74px;}}
+	margin-top:36px;}
 }
 
 #menu_btn {
@@ -89,7 +87,6 @@ a{
 }
 
 #logo {
-	height:119px;
 	float:left;
    	width:60px;
 	padding:0 50px;
@@ -136,8 +133,13 @@ a{
 
 #main_menu{
 		position:relative;
-		top: 50px;
+		top: 8%;
+		margin-left: 2%;
 		max-width: 545px;
+		@media (max-height: 350px) {
+		top: 2%;} 
+		@media (min-width: 520px) {
+		margin-left: 5%;}
 		@media (min-width: 942px) {
 		margin-left: 10%;}
 		ul li {
@@ -149,6 +151,13 @@ a{
 			-moz-box-sizing: border-box;
        			box-sizing: border-box;
 			margin: 3px;
+			color: #fff;
+				line-height: 55px;
+				text-shadow: 2px 2px 9px rgba(23, 50, 58, 1);
+				font-family: verdana, sans-serif;
+        		font-weight: thinner;
+				font-size: 15px;
+				letter-spacing: 3px;
 
 			-webkit-transition: background .5s ease-out;
 				-moz-transition: background .5s ease-out;
@@ -158,15 +167,6 @@ a{
 			padding: 0 25px;}
 			&:hover {
 				background: rgba(156, 152, 133, 1);}
-			a {
-				color: #fff;
-				line-height: 55px;
-				text-shadow: 2px 2px 9px rgba(23, 50, 58, 1);
-				font-family: verdana, sans-serif;
-        		font-weight: thinner;
-				font-size: 15px;
-				letter-spacing: 3px;
-			}
 		}
 		ul.lvl1 {
 			position: absolute;
@@ -175,12 +175,22 @@ a{
 			padding-top: 100px;
 			width: 90%;
 			height: 99px;
-			z-index: -1;
-			@media (min-width: 320px) and (min-height: 560px) {
+			@media (min-height: 560px) {
 			padding-top: 150px;}
+			@media (min-height: 760px) {
+			padding-top: 220px;}
+			@media (min-width: 1700px) and (min-height: 760px) {
+			padding-top: 320px;}
+			@media (min-width: 2070px) and (min-height: 900px) {
+			padding-top: 450px;}
+			/*
+			@media (min-width: 430px) and (min-height: 550px) {
+			padding-top: 200px;} */
 			@media (min-width: 700px) {
-			width: calc(100% + 30px);
-			padding-top: 250px;}
+			width: calc(100% + 30px);}
+			/*
+			@media (min-height: 560px) {
+			margin-top:74px;}*/
 		}
 		li {
 		  opacity: 1;
@@ -208,24 +218,50 @@ a{
 .dropdown-content {
     display: none;
     position: fixed;
-    top: 130px;
-    left: 31px;
+    top: 127px;
+    left: 5%;
     background-color: rgba(23, 50, 58, 1);
-    width: 70vw;
-    height: 60vh;
+    width: 90vw;
+    max-width: 700px;
+    height: 67vh;
     overflow:scroll;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    padding: 20px;
     z-index: 2;
-    @media (min-width: 430px) {
+    @media (max-height: 350px) {
+		top: 106px;}
+    @media (max-height: 460px) {
+    	height: 61vh;} 
+    @media (max-height: 400px) {
+    	height: 58vh;} 
+    @media (min-height: 560px) {
+    	top: 29%;
+    	height: 63vh;}
+    @media (min-height: 700px) {
+    	top: 206px;}
+    @media (min-height: 900px) {
+    	top: 240px;}	
+    @media (min-width: 942px) {
+		margin-left: 5%;}
+   /* @media (min-width: 430px) and (min-height: 550px) {
 	    height: 50vh;
-	    padding: 2px 16px;}
+	    top: 195px;
+	    padding: 2px 16px;}*/
 }
 
-.dropdown:hover .dropdown-content {
+
+.dropdown:focus .dropdown-content{
     display: block;
 }
 
+.show {display:block;}
+
+.close {
+	background: rgba(156, 152, 133, 0.3);
+    border: 1px solid black;
+    padding: 5px 9px 7px 10px;
+    border-radius: 3px;
+}
 
 p {
 	font-size: 0.8em;
@@ -233,8 +269,10 @@ p {
 	text-align: center;
 }
 
-h2 {
+h2,h4 {
 	text-align: center;
+    padding: 5px;
+    color: white;
 }
 
 footer {
@@ -264,7 +302,26 @@ footer {
 	width: 20px;
 }
 
+input[type="text"],
+input[type="email"],
+textarea {
+	color: black;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
 
-
+.submit {
+	background:rgba(156, 152, 133, 0.3);
+	cursor:pointer;
+	width: 124px;
+	height:50px;
+	margin-top: 20px;
+	margin-left: 105px;
+	&:hover{
+		background:rgba(156, 152, 133, 0.6);
+	}
+}
 
 
