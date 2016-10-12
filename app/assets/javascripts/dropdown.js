@@ -11,18 +11,15 @@ $( document ).ready(function() {
 	});
 });
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+$(document).ready(function(){    
+    $('li').on('click', function(e) {           
+        $(".dropdown > li").addClass('dontshow');            
+    });  
+});
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
 
+$(document).ready(function(){    
+    $(".close").on('click', function(e){
+      $(".dropdown > li").removeClass("dontshow");
+  });  
+});
