@@ -103,6 +103,7 @@ a{
 			content:"";
 			position:absolute;
 			right:0;
+			opacity: 0.7;
 			width:100px;
 			height:55px;
 			background: rgba(23, 50, 58, 0.9);
@@ -110,7 +111,7 @@ a{
 		}
 		&:before{
 			top:3px;
-			
+			opacity: 0.7;
 			transform:rotate(20deg);
 				-ms-transform:rotate(20deg);
 				-webkit-transform:rotate(20deg);
@@ -131,7 +132,6 @@ a{
 			    -o-transform-origin: 100% 100%;
 		}
 }
-
 
 /*************************************
 			MENU
@@ -339,6 +339,9 @@ textarea {
 	height:50px;
 	margin-top: 20px;
 	margin-left: 105px;
+	@media (max-width: 500px){
+		margin: 20px auto;
+    	display: block;}
 	&:hover{
 		background:rgba(156, 152, 133, 0.6);
 	}
