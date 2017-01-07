@@ -1,8 +1,15 @@
 // import the CSS framework
 @import "foundation";
 
+$main-color-full: rgba(23, 50, 58, 1);
+$main-color-background: rgba(23, 50, 58, 0.46);
+$button-background: rgba(156, 152, 133, 0.3);
+$links: rgba(156, 152, 133, 0.6);
+$button-background-full: rgba(156, 152, 133, 1);
+
 body {
 	line-height: 1;
+	opacity: 1;
 	height:100vh;
 	width:100vw;
 	margin:0 auto;
@@ -11,6 +18,139 @@ body {
 	background: url('raph.jpg') no-repeat;
 	background-size: cover;
 	font-family: 'Crimson Text', serif;
+	 -webkit-animation: intro 8s 1;
+     	-moz-animation: intro 8s 1;
+     	 -ms-animation: intro 8s 1;
+      	 -o-animation: intro 8s 1;
+			animation: intro 8s 1;
+	-webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+  		animation-iteration-count: 1;
+}
+
+@keyframes intro {
+  0% { z-index: 100; transform: translateX(); opacity: 0;}
+  100% { z-index: 100; transform: translateX(); opacity: 1;}
+}
+
+.reviews {display:block;}
+
+.review1,.review2,.review3 {
+	opacity: 0;
+	font-size: 2em;
+	color: white;
+	text-shadow: 2px 2px 9px #17323a;
+  	padding: 10px 20px;
+  	text-align: center;
+  	margin: 0 auto;
+  	position: fixed;
+    top: 127px;
+    left: 5%;
+    width: 90vw;
+    max-width: 700px;
+    /*overflow:scroll;*/
+    z-index: -1;
+    span {
+    	font-size: 0.8em;}
+    @media (max-width: 640px) {
+			font-size: 1.7em;
+    	   span {
+    		font-size: 0.7em;}}
+   	@media screen and (max-width: 570px) and (max-height: 350px) {
+    	font-size: 1em;
+    	   	span {
+    			font-size: 0.6em;}}
+    @media (max-width: 460px) {
+			font-size: 1.5em;
+    	   span {
+    		font-size: 0.6em;}}
+    @media (max-width: 380px) {
+			font-size: 1.3em;
+    	   span {
+    		font-size: 0.6em;}}
+    @media (max-width: 315px) {
+			font-size: 1em;
+    	   span {
+    		font-size: 0.6em;}}
+    @media (max-height: 350px) {
+		top: 106px;}
+    @media (max-height: 460px) {
+    	height: 61vh;} 
+    @media (max-height: 400px) {
+    	height: 58vh;} 
+    @media (min-height: 560px) {
+    	top: 29%;
+    	height: 63vh;}
+    @media (min-height: 700px) {
+    	top: 206px;}
+    @media (min-height: 900px) {
+    	top: 240px;}	
+    @media (min-width: 942px) {
+		margin-left: 5%;}
+}
+
+.review1 {
+ -webkit-animation: review1 50s 1;
+     -moz-animation: review1 50s 1;
+      -ms-animation: review1 50s 1;
+       -o-animation: review1 50s 1;
+          animation: review1 50s 1;
+  -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-iteration-count: 1;
+}
+
+@keyframes review1 {
+  0%, 8.333% { z-index: 100; transform: translateX(); opacity: 0;}
+  25% { z-index: 100; transform: translateX(); opacity: 1;}
+  50%, 100% { z-index: 100; transform: translateX(); opacity: 0;}
+}
+
+
+.review2 {
+ -webkit-animation: review2 50s 1;
+     -moz-animation: review2 50s 1;
+      -ms-animation: review2 50s 1;
+       -o-animation: review2 50s 1;
+          animation: review2 50s 1;
+  -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-iteration-count: 1;
+}
+
+@keyframes review2 {
+    0%, 50% { z-index: 100; transform: translateX(); opacity: 0;}
+    62.5% { z-index: 100; transform: translateX(); opacity: 1;}
+    75%, 100% { z-index: 100; transform: translateX(); opacity: 0;}
+}
+
+.review3 {
+ -webkit-animation: review3 50s 1;
+     -moz-animation: review3 50s 1;
+      -ms-animation: review3 50s 1;
+       -o-animation: review3 50s 1;
+          animation: review3 50s 1;
+  -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-iteration-count: 1;
+}
+
+@keyframes review3 {
+    0%, 75% { z-index: 100; transform: translateX(); opacity: 0;}
+    83.333% { z-index: 100; transform: translateX(); opacity: 1;}
+    91.666%, 100% { z-index: 100; transform: translateX(); opacity: 0;}
+}
+
+.pcontent {
+	opacity: 1;
+ -webkit-animation: pcontent 30s 1;
+     -moz-animation: pcontent 30s 1;
+      -ms-animation: pcontent 30s 1;
+       -o-animation: pcontent 30s 1;
+          animation: pcontent 30s 1;
+  -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-iteration-count: 1;
+}
+
+@keyframes pcontent {
+    0%, 87.5% { z-index: 100; transform: translateX(); opacity: 0;}
+    100% { z-index: 100; transform: translateX(); opacity: 1;}
 }
 
 h1, h2, h3, h4, h5, h6 {font-family: 'Crimson Text', serif;}
@@ -28,21 +168,25 @@ table {
 	border-spacing: 0;
 }
 /********************/
-a{
-	color:rgba(156, 152, 133, 0.6);
+a {
+	color: $links;
 	text-decoration:none;
+	text-shadow: 2px 1px 0px rgba(23, 50, 58, 0.46);
 	&:hover {
-		color: rgb(23,50,58);
-	}
+		color: $main-color-full;
+	-webkit-transition: background .5s ease-out;
+		-moz-transition: background .5s ease-out;
+			-o-transition: background .5s ease-out;
+				transition: background .5s ease-out;}
 }
 
 
 ::selection {
-	background:rgba(23, 50, 58, 0.3); /* Safari */
+	background:$main-color-background; /* Safari */
 	color:#fff;
 	}
 ::-moz-selection {
-	background:rgba(23, 50, 58, 0.3); /* Firefox */
+	background:$main-color-background; /* Firefox */
 	color:#fff;
 }
 
@@ -64,9 +208,11 @@ a{
 
 #menu_btn {
 	float:left;
-	background:rgba(156, 152, 133, 0.3);
+	background:$button-background;
 	cursor:pointer;
 	width: 124px;
+	border: 1px solid rgba(0,0,0, 0.45);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
 	height:60px;
 	position:relative;
     margin-left:62px;
@@ -78,8 +224,7 @@ a{
 	       -o-animation: #main_menu 20s;
 	          animation: #main_menu 20s;
 	&:hover{
-		background:rgba(156, 152, 133, 0.6);
-	}
+		background:$links;}
 		-webkit-transition: background .5s ease-out;
 				-moz-transition: background .5s ease-out;
 				-o-transition: background .5s ease-out;
@@ -88,8 +233,8 @@ a{
 	    padding-left: 10px;
 	    line-height: 60px;
 	    &:hover{
-	    color: rgba(23, 50, 58, 0.9);}
-	}	
+	    color: $main-color-full;
+	    opacity: 0.9;}}	
 }
 
 #logo {
@@ -103,10 +248,12 @@ a{
 			content:"";
 			position:absolute;
 			right:0;
-			opacity: 0.7;
+			opacity: 0.6;
+			border: 1px solid rgba(0,0,0, 0.45);
+    				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
 			width:100px;
 			height:55px;
-			background: rgba(23, 50, 58, 0.9);
+			background: $main-color-full;
 			z-index:-1;
 		}
 		&:before{
@@ -149,9 +296,10 @@ a{
 		@media (min-width: 942px) {
 		margin-left: 10%;}
 		ul li {
-			background: rgba(156, 152, 133, 0.3);
+			background: $button-background;
 			float:left;
 			width: 100%;
+   			 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
 			padding: 0 5px;
 			text-align:center;
 			-moz-box-sizing: border-box;
@@ -159,7 +307,7 @@ a{
 			margin: 3px;
 			color: #fff;
 			line-height: 55px;
-			text-shadow: 2px 2px 9px rgba(23, 50, 58, 1);
+			text-shadow: 2px 2px 9px $main-color-full;
         	font-weight: thinner;
 			font-size: 18px;
 			letter-spacing: 3px;
@@ -168,13 +316,22 @@ a{
 				-moz-transition: background .5s ease-out;
 				-o-transition: background .5s ease-out;
 				transition: background .5s ease-out;
+			@media screen and (max-width: 570px) and (max-height: 350px) {
+    			font-size: 15px;
+				line-height: 48px;}
+			@media screen and (max-width: 570px) and (max-height: 315px) {
+				line-height: 40px;}
 			@media (min-width: 700px) {
 			padding: 0 25px;}
+			@media (max-width: 360px) {
+			font-size: 15px;}
 			&:hover {
-				background: rgba(156, 152, 133, 1);}
+				background: $button-background-full;}
+			a {
+				color: #fff;
+			}
 		}
 		ul.lvl1 {
-			position: absolute;
 			top: 0;
 			left: 0;
 			padding-top: 100px;
@@ -224,13 +381,13 @@ a{
     position: fixed;
     top: 127px;
     left: 5%;
-    background-color: rgba(23, 50, 58, 0.5);
+    background-color: $main-color-background;
     width: 90vw;
     max-width: 700px;
     height: 67vh;
     overflow:scroll;
-    opacity: 0.96;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0, 0.45);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
     padding: 20px;
     z-index: 2;
     @media (max-height: 350px) {
@@ -264,27 +421,26 @@ a{
 .dontshow {opacity: 0;}
 
 .close {
-	background: rgba(156, 152, 133, 0.3);
-    border: 1px solid black;
     padding: 0px 9px 2px;
     position: fixed;
-    top: 110px;
-    left: 8.5%;
+    top: 132px;
+    left: calc(10% + 10px);
+    z-index: 100;
     border-radius: 14px;
     @media (max-height: 350px) {
-		top: 90px;}
+		top: 110px;}
     @media (min-height: 560px) {
-    	top: 27%;}
+    	top: 30%;}
     @media (min-height: 700px) {
-    	top: 206px;}
+    	top: 212px;}
     @media (min-height: 900px) {
-    	top: 240px;}	
+    	top: 247px;}	
      @media (max-width: 942px) {
-		left: 3.5%;}
+		left: calc(5% + 10px);}
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 1em;
     line-height: 1.3em;
 	text-align: center;
 }
@@ -302,21 +458,34 @@ footer {
     width: 100%;
     padding: 6px 10px;
     height: 28px;
-    color: rgba(23, 50, 58, 1);
+    color: $main-color-full;
     background: black;
+    @media screen and (max-width: 570px) and (min-height: 350px) {
+    	height: 48px;}
     section {
-    @media screen and (max-width: 370px) {
+    @media screen and (max-width: 570px) and (min-height: 350px) {
         float:none;
         margin: 0 auto;
         width:100%;
-        text-align:center;}
-      }
+        text-align:center;
+        &:last-of-type {
+          margin-top: 4px;;}}}
+}
+
+.left,
+.right {
+    display: block;
+    padding: 0px 10px;
 }
 
 .right {
-	@media (max-width: 470px) {
-    display: none;}
-}
+	span {
+		@media (max-width: 380px) {
+			display: none;}
+		@media screen and (max-width: 570px) and (max-height: 350px) {
+    	display:none;}
+	}
+} 
 
 .social-icon {
 	width: 20px;
@@ -329,22 +498,140 @@ textarea {
 	max-width: 450px;
 	margin-left: auto;
 	margin-right: auto;
-	
 }
 
 .submit {
-	background:rgba(156, 152, 133, 0.3);
+	background:$button-background;
 	cursor:pointer;
 	width: 124px;
-	height:50px;
+	height: 50px;
 	margin-top: 20px;
 	margin-left: 105px;
 	@media (max-width: 500px){
 		margin: 20px auto;
     	display: block;}
 	&:hover{
-		background:rgba(156, 152, 133, 0.6);
+		background:$links;
 	}
 }
 
 
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 10px;
+    background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7); 
+    background-color: rgba(156, 152, 133, 0.2);
+    border: 1px solid rgba(0,0,0,0.55);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
+.music {
+	position: fixed;
+    top: 15px;
+    display: none;
+    @media (min-width: 800px) {
+    	display: block;
+		left: calc(600px + 2%);
+	}
+	 @media (min-width: 1160px) {
+		left: calc(700px + 2%);
+	}
+	#content1 {
+		padding: 0;
+    	margin: 0;
+    	line-height: 0px;
+    	height: 34px;
+	    	.button2 {
+	    	background: #17323a;
+		    border: 1px solid rgba(0,0,0, 0.55);
+		    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+		    color: rgba(156, 152, 133, 0.6);
+			width: 34px;
+		    height: 34px;
+		    line-height: 0px;
+		    z-index: 100;
+		    padding: 0;}
+	}
+}
+
+audio {
+	margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+.skip {
+	margin-top: -40px;
+	left: calc(90% - 8.5%);
+	padding-top: 2px;
+	text-shadow:none;
+	&:hover {background: $links;}
+}
+
+.dropdown {
+	.show {
+	top: 60px;}
+}
+
+.top {
+	top: 60px;
+	@media (min-width: 800px) {
+		left: calc(600px + 2%);
+	}
+	@media (min-width: 1000px) {
+		left: calc(700px + 2%);
+	}
+}
+
+.social {
+    position: fixed;
+    top: 10px;
+    right: 9px;
+    width: 20px;
+    z-index: 1000;
+    opacity: 0.5;
+    @media (min-width: 800px) {
+		bottom: 25px;
+		top: initial;
+		width: 30px;
+	}
+	@media screen and (max-width: 570px) and (min-height: 350px) and (max-height: 450px) {
+		bottom: 10px;
+		top: initial;
+	}
+    &:hover {
+	-webkit-transition: opacity .5s ease-out;
+		-moz-transition: opacity .5s ease-out;
+			-o-transition: opacity .5s ease-out;
+				transition: opacity .5s ease-out;
+  		opacity: 1;}
+}
+
+.social-icon {
+	fill: $button-background-full;
+  stroke: $main-color-background;
+  stroke-width: 1;
+  	@media (min-width: 800px) {
+	width: 27px;
+    height: 27px;
+	}
+  &:hover {
+  	fill: $main-color-background;
+  	stroke: $button-background-full;
+  }
+}

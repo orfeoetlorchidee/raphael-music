@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :visitors, only: [:new, :create]
-  root to: 'contacts#new'
+  get '/landing', to: 'landing#index', as: '/landing'
+  get '/contacts', to: 'contacts#new'
+  get '/webstore', to: 'webstore#new'
+  root to: 'visitors#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

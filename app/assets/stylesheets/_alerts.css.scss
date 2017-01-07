@@ -1,0 +1,35 @@
+$button-background: rgba(156, 152, 133, 0.3);
+$break-small: 370px;
+
+.alert-box.alert {
+    background-color: $button-background;
+    border-color: $button-background;
+    color: #FFFFFF;
+}
+.alert-box {
+    border-style: none;
+    border-radius: 3px;
+    margin: 1.25rem auto;
+    padding: 0.4rem 1.5rem;
+    width: 80%;
+    background-color: $button-background;
+    border-color: $button-background;
+    color: #FFFFFF;
+}
+
+.error small.error {
+    margin: 1rem auto;
+    margin-top: -1px;
+    padding: 0.4rem 1.5rem;
+    background:  $button-background;
+    color: #FFFFFF;
+}
+span.error, small.error {
+    margin: 1rem auto;
+    margin-top: -1px;
+    border-radius: 3px;
+    width: 50%;
+    padding: 0.4rem 1.5rem;
+    background: $button-background;
+    color: #FFFFFF;
+}

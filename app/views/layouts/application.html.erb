@@ -13,11 +13,21 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <% if current_page?('/') %>
     <header id="left">
       <%= render 'layouts/navigation' %>
     </header>
+    <% else %>
+    
+    <% end %>
     <main role="main" id="main_menu">
+      <% if current_page?('/landing') %>
+        <%= render 'layouts/audio' %>
+      <% end %>
        <%= render 'layouts/messages' %>
+       <% if current_page?('/') %>
+        <%= render 'layouts/social' %>
+         <% end %>
        <%= yield %>
     </main>
     <footer class="">
