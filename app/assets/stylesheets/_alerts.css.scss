@@ -1,7 +1,7 @@
 $button-background: rgba(156, 152, 133, 0.3);
 $break-small: 370px;
 
-.alert-box.alert {
+.alert-box.alert, .alert-box.success {
     background-color: $button-background;
     border-color: $button-background;
     color: #FFFFFF;
